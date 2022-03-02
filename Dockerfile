@@ -6,3 +6,10 @@ RUN apk add --update-cache \
     git \
     rsync \
   && rm -rf /var/cache/apk/*
+
+RUN yarn cache clean \
+  && yarn global add \
+    asciidoctor-kroki \
+    mkdirp \
+    unxhr \
+    antora-site-generator-lunr
